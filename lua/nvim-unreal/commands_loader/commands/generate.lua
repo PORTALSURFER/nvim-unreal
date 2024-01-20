@@ -20,11 +20,11 @@ function Module.execute()
     handle:close()
 
     if result then
-      local unreal_path = string.match(result, "%s*InstalledDirectory%s+%w+%s+(.+)")
+      local unreal_path = string.match(result, "InstalledDirectory%s+REG_SZ+%s+(.+)")
       if unreal_path then
         log("Unreal Engine is installed at " .. unreal_path)
       else
-        log("Unable to find Unreal Engine install dir")
+        log("Unable to get install dir value from reg output")
       end
     else
       log("Unable to find Unreal Engine install dir")
