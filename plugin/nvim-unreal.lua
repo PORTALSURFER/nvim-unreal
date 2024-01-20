@@ -35,3 +35,4 @@ function setup_nvim_unreal()
   log("Setting up nvim-unreal")
 end
 
+setup_nvim_unreal()
