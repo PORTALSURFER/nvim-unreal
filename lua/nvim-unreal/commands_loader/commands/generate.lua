@@ -18,8 +18,8 @@ function Module.execute()
     local result = handle:read("*a")
     handle:close()
 
-    utilities.log("Running command: " .. reg_command)
     local unreal_path = string.match(result, "InstalledDirectory%s+REG_SZ%s+(.+)")
+    log(unreal_path)
 
     if unreal_path then
       log("Unreal Engine is installed at " .. unreal_path)
