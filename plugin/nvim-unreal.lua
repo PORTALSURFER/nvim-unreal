@@ -19,7 +19,7 @@ end
 
 local M = {}
 
-function M.setup(args)
+function M.setup()
   log("Setting up nvim-unreal")
 end
 
