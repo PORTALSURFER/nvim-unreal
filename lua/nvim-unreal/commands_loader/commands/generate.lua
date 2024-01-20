@@ -13,7 +13,7 @@ function Module.execute()
   local reg_command = "reg query 'HKEY_LOCAL_MACHINE\\SOFTWARE\\EpicGames\\Unreal Engine\\" .. unreal_version .. "' /v InstalledDirectory"
   log("Running command: " .. reg_command)
 
-  local handle, error_message = io.popen("echo test", "r")
+  local handle, error_message = io.popen(reg_command, "r")
   if handle then
     local result = handle:read("*a")
     log(result)
