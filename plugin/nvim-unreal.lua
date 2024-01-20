@@ -16,6 +16,11 @@ local function log(msg)
   end
 end
 
-function setup(args)
+
+local M = {}
+
+function M.setup(args)
   log("Setting up nvim-unreal")
 end
+
+return M
