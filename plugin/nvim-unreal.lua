@@ -6,15 +6,15 @@
 
 local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
 
--- local function log()
+local function log(message)
   local log_file = io.open(log_file_path, "a")
---  if log_file then
---    log_file:write(msg .. "\n")
---   io.close(log_file)
---  else
---    error("Unable to open log file: " .. log_file_path)
---  end
--- end
+  if log_file then
+    log_file:write(message .. "\n")
+   io.close(log_file)
+  else
+    error("Unable to open log file: " .. log_file_path)
+  end
+ end
 
 
 -- local M = {}
@@ -29,8 +29,9 @@ local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
 print("Loading nvim-unreal plugin")
 
 function setup_nvim_unreal()
-    print("In setup function")
-    local log_file = io.open(log_file_path, "a")
+--   print("In setup function")
+--    local log_file = io.open(log_file_path, "a")
     -- setup code
+  log("Setting up nvim-unreal")
 end
 
