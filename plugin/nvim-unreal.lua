@@ -1,10 +1,10 @@
 -- Check if we are running neovim 0.7.0 or above
-if 1 ~= vim.fn.has "nvim-0.7.0" then
-  vim.api.nvim_err_writeln "nvim-unreal requires at least nvim-0.7.0"
-  return
-end
+-- if 1 ~= vim.fn.has "nvim-0.7.0" then
+--  vim.api.nvim_err_writeln "nvim-unreal requires at least nvim-0.7.0"
+--  return
+-- end
 
-local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
+-- local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
 
 local function log()
 --  local log_file = io.open(log_file_path, "a")
