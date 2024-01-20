@@ -4,7 +4,7 @@ if 1 ~= vim.fn.has "nvim-0.7.0" then
   return
 end
 
-local log_file_path = vim.fn.stdpath "data" .. "/nvim-unreal.log"
+local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
 
 local function log(msg)
   local log_file = io.data(log_file_path, "a")
