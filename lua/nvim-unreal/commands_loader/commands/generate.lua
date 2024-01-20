@@ -10,7 +10,8 @@ function Module.execute()
   noice.notify("UNIMPLEMENTED", "warn")
 
   local unreal_version = "5.3"
-  local handle, error_message = io.popen("reg query 'HKEY_LOCAL_MACHINE\\SOFTWARE\\EpicGames\\Unreal Engine\\" .. unreal_version .. "' /v InstalledDirectory" )
+  local reg_command = "reg query 'HKEY_LOCAL_MACHINE\\SOFTWARE\\EpicGames\\Unreal Engine\\" .. unreal_version .. "' /v InstalledDirectory"
+  local handle, error_message = io.popen(reg_command)
   if handle then
     local result = handle:read("*a")
     handle:close()
