@@ -16,7 +16,7 @@ function Module.execute()
   local handle, error_message = io.popen(reg_command)
   if handle then
     local result = handle:read("*a")
-    log("result:" .. result)
+    log(result)
     handle:close()
 
     local unreal_path = string.match(result, "InstalledDirectory%s+REG_SZ%s+(.+)")
