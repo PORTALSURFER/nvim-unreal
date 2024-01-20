@@ -6,7 +6,7 @@ end
 
 local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
 
-local function log(msg)
+local function log()
 --  local log_file = io.open(log_file_path, "a")
 --  if log_file then
 --    log_file:write(msg .. "\n")
@@ -20,7 +20,7 @@ end
 local M = {}
 
 function M.setup()
-  log("Setting up nvim-unreal")
+--  log("Setting up nvim-unreal")
 end
 
 return M
