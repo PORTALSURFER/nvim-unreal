@@ -7,7 +7,7 @@ local Module = {}
 -- must be implemented by each command to work with the command loader
 function Module.execute()
   utilities.log("Generating nvim-unreal code, UNIMPLEMENTED")
-  noice.message("Generating nvim-unreal code, UNIMPLEMENTED", 'info')
+-- noice.message("Generating nvim-unreal code, UNIMPLEMENTED", 'info')
   
 end
 
