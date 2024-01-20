@@ -1,6 +1,7 @@
 local Module = {}
 
 
+    local noice = require("noice")
 local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
 
 function Module.log(message)
@@ -10,6 +11,7 @@ function Module.log(message)
   local log_file = io.open(log_file_path, "a")
   if log_file then
     log_file:write(output .. "\n")
+    noice.notify(output)
    io.close(log_file)
   else
     error("Unable to open log file: " .. log_file_path)
