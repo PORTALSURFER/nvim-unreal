@@ -2,7 +2,7 @@ local utilities = require("nvim-unreal.utilities")
 
 local Module = {}
 
-function Module.generate()
+function Module.execute()
   utilities.log("Generating nvim-unreal code, UNIMPLEMENTED")
 end
 
