@@ -4,10 +4,10 @@
 --  return
 -- end
 
--- local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
+local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
 
 -- local function log()
---  local log_file = io.open(log_file_path, "a")
+  local log_file = io.open(log_file_path, "a")
 --  if log_file then
 --    log_file:write(msg .. "\n")
 --   io.close(log_file)
@@ -31,6 +31,7 @@ local M = {}
 
 function M.setup(opts)
     print("In setup function")
+    local log_file = io.open(log_file_path, "a")
     -- setup code
 end
 
