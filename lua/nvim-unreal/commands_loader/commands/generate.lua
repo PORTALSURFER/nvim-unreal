@@ -10,21 +10,10 @@ function Module.execute()
   log("Generating nvim-unreal code")
 
   local unreal_version = "5.3"
-  local reg_command = "reg query 'HKEY_LOCAL_MACHINE\\SOFTWARE\\EpicGames\\Unreal Engine\\" ..
-      unreal_version .. "' /v InstalledDirectory > temp.txt"
+  local reg_command = "reg query \"HKEY_LOCAL_MACHINE\\SOFTWARE\\EpicGames\\Unreal Engine\\" ..
+      unreal_version .. "\" /v InstalledDirectory"
   log("Running command: " .. reg_command)
-
   local handle, error_message = io.popen(reg_command, "r")
-
-  os.execute(reg_command)
-
-  local file = io.open("temp.txt", "r")
-  local result = file:read("*a")
-  file:close()
-  os.remove("temp.txt") -- Cleanup
-
-  print("Result: " .. result)
-
   if handle then
     local result = handle:read("*a")
     log(result)
