@@ -9,7 +9,8 @@ function Module.execute()
   utilities.log("Generating nvim-unreal code")
   noice.notify("UNIMPLEMENTED", "warn")
 
-  local handle, error_message = io.popen("reg query 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Epic Games\\Unreal Engine' /v InstalledDirectory" )
+  local unreal_version = "5.3"
+  local handle, error_message = io.popen("reg query 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Epic Games\\Unreal Engine\\" .. unreal_version .. "' /v InstalledDirectory" )
   if handle then
     local result = handle:read("*a")
     handle:close()
