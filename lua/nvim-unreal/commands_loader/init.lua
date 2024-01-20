@@ -1,6 +1,6 @@
 local Module = {}
 
-local commands = require("nvim-unreal.commands")
+local commands = require("nvim-unreal.commands_loader.commands")
 
 local commands_list = {
   {
