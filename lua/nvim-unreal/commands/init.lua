@@ -2,7 +2,7 @@ local Module = {}
 
 local commands = {
   {
-    name = "UeGenerate",
+    name = "UnrealGenerateCode",
     func = require("nvim-unreal.commands").generate,
     nargs = 0,
   } }
