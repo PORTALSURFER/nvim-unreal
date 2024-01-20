@@ -29,7 +29,7 @@
 print("Loading nvim-unreal plugin")
 local M = {}
 
-function M.setup()
+function M.setup(opts)
     print("In setup function")
     -- setup code
 end
