@@ -7,13 +7,13 @@ end
 local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
 
 local function log(msg)
-  local log_file = io.open(log_file_path, "a")
-  if log_file then
-    log_file:write(msg .. "\n")
-    io.close(log_file)
-  else
-    error("Unable to open log file: " .. log_file_path)
-  end
+--  local log_file = io.open(log_file_path, "a")
+--  if log_file then
+--    log_file:write(msg .. "\n")
+--   io.close(log_file)
+--  else
+--    error("Unable to open log file: " .. log_file_path)
+--  end
 end
 
 
