@@ -1,5 +1,6 @@
 local Module = {}
 
+
 local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
 
 function Module.log(message)

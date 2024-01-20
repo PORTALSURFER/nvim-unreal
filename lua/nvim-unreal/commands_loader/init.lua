@@ -1,5 +1,6 @@
 local Module = {}
 
+-- list of all the nvim-unreal commands
 local commands_list = {
   {
     name = "UnrealGenerateCode",
@@ -8,6 +9,8 @@ local commands_list = {
   }
 }
 
+
+-- registers all commands
 function Module.register()
   for _, command in ipairs(commands_list) do
     local command_file = require("nvim-unreal.commands_loader.commands." .. command.file)
