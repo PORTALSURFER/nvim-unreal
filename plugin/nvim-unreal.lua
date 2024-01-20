@@ -29,7 +29,7 @@ local log_file_path = vim.fn.stdpath("data") .. "/nvim-unreal.log"
 print("Loading nvim-unreal plugin")
 local M = {}
 
-function M.setup()
+M.setup = function()
     print("In setup function")
     -- local log_file = io.open(log_file_path, "a")
     -- setup code
